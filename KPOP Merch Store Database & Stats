@@ -1,0 +1,29 @@
+-- Create a Kpop Merchandice database
+
+CREATE TABLE Kpop_Merch (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity INTEGER, rating INTEGER);
+
+INSERT INTO Kpop_Merch VALUES (1, "Shirts", 60, 90, 5);
+INSERT INTO Kpop_Merch VALUES (2, "Jackets", 80, 90, 5);
+INSERT INTO Kpop_Merch VALUES (3, "Hats", 30, 50, 3);
+INSERT INTO Kpop_Merch VALUES (4, "Lightsticks", 70, 80, 5);
+INSERT INTO Kpop_Merch VALUES (5, "Albums", 60, 100, 5);
+INSERT INTO Kpop_Merch VALUES (6, "Dolls", 40, 50, 4);
+INSERT INTO Kpop_Merch VALUES (7, "Stickers", 5, 50, 3);
+INSERT INTO Kpop_Merch VALUES (8, "Pins", 8, 20, 3);
+INSERT INTO Kpop_Merch VALUES (9, "Banners", 20, 50, 3);
+INSERT INTO Kpop_Merch VALUES (10, "Photocards", 17, 7, 5);
+INSERT INTO Kpop_Merch VALUES (11, "Photobooks", 35, 70, 4);
+INSERT INTO Kpop_Merch VALUES (12, "Posters", 15, 40, 3);
+INSERT INTO Kpop_Merch VALUES (13, "Postcards", 20, 40, 3);
+INSERT INTO Kpop_Merch VALUES (14, "Picketfans", 15, 20, 3);
+INSERT INTO Kpop_Merch VALUES (15, "Phonecases", 60, 50, 5);
+
+--Display the database order by price.
+SELECT * FROM Kpop_Merch
+ORDER BY price desc;
+
+--What is the total quantity of items in the kpop merch store to sell?
+SELECT SUM(quantity) FROM Kpop_Merch;
+
+---What items in the store are under $40? 
+SELECT * FROM Kpop_Merch WHERE price < 40 ORDER BY price desc;
